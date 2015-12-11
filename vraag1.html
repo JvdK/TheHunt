@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>TheHunt</title>
+	<meta charset="UTF-8"/>
+    <script src="js/point.js"></script>
+	<script src="js/js.cookie.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <script>
+        function point(amount) {
+            Cookies.set('points', Cookies.get('points') + amount)
+        }
+
+        Cookies.set('name', 'Kees');
+
+        $(document).ready(function() {
+            $("#name").html(Cookies.get('name'));
+            $("#points").html(Cookies.get('points'));
+        });
+
+        point(5);
+    </script>
+	<img src="images/vraag1.png" usemap="#vraag">
+	<map name="vraag">
+		<area shape="rect" coords="0, 0, 200, 200" href="vraag2.html">
+	</map>
+
+    <div id="name"></div>
+    <div id="points"></div>
+</body>
+</html>
