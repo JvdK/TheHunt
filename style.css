@@ -1,3 +1,99 @@
 html, body {
+    height: 100%;
+    width: 100%;
     background-color: #d5e8f7;
+    font-family: Verdana, serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.topbar {
+    height: 10%;
+    background-color: greenyellow;
+    font-weight: bold;
+}
+.back {
+    float: left;
+    padding: 10px;
+    font-size: 18px;
+}
+.points {
+    float: right;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.question {
+    height: 35%;
+    text-align: center;
+}
+.questionInner {
+    padding: 0 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.answers {
+    height: 55%;
+}
+
+.answers div {
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 15px;
+    background: grey;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menubutton {
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 15px;
+    background: grey;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result {
+    padding-top: 30%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.page {
+    height: 90%;
+}
+
+.image {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.image img {
+    margin-top: 10px;
+    max-height: 120px;
+    max-width: 120px;
+}
+
+a:link {
+    text-decoration: none; color: #000000;
+}
+
+a:visited {
+    text-decoration: none; color: #000000;
+}
+
+a:hover {
+    text-decoration: none; color: #000000;
+}
+
+a:active {
+    text-decoration: none; color: #000000;
 }
