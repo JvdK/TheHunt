@@ -64,12 +64,21 @@ function check_answer($vraagid, $answer) {
     }
 
     // Handel vragen af
-    if(isset($_GET['vraag'])) {
+    if(isset($_GET['vraag']) || isset($_GET['versie'])) {
         // Haal vraag ID uit link of zet anders op 1
         if(isset($_GET['vraag'])) {
             $vraagid = $_GET['vraag'];
         } else {
-            $vraagid = 1;
+            if(isset($_GET['versie'])) {
+                switch ($_GET['versie']) {
+                    case 1: $vraagid = 1; break;
+                    case 2: $vraagid = 101; break;
+                    case 3: $vraagid = 201; break;
+                    default: $vraagid = 1; break;
+                }
+            } else {
+                $vraagid = 1;
+            }
         }
         // Controleer antwoord en geef feedback //
         if(isset($_GET['antwoord'])) {
@@ -768,7 +777,27 @@ function check_answer($vraagid, $answer) {
         </div>
     <?php
     break;
-
+    case 22: ?>
+        <div>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    Gefeliciteerd!<br><br>
+                    Jullie hebben<br><?php echo $_SESSION['punten']; ?> punten<br><br>
+                    Het kostte jullie<br><?php $time = time() - $_SESSION['start']; echo $time; ?> seconden
+                </div>
+            </div>
+        </div>
+    <?php
+    break;
                     default:
                         break;
                 }
@@ -779,11 +808,15 @@ function check_answer($vraagid, $answer) {
             // Herstart sessie (new game) als men op home komt.
             $_SESSION['name'] = 'Team 1';
             $_SESSION['punten'] = 0;
+            $_SESSION['start'] = time();
             ?>
             <div class="page" style="text-align: center;">
-                <br>
+                <div class="appname">
+                    The Hunt
+                </div>
                 <img style="max-width: 260px; max-height: 260px;" src="images/logo.png"><br>
-                <a href="index.php?vraag=1"><div class="menubutton">Start</div></a>
+                <br><br>
+                <a href="index.php?versie=<?php if(isset($_GET['versie'])) {echo $_GET['versie'];} else {echo '1';} ?>"><div class="menubutton">Start</div></a>
             </div>
         <?php } else {
             // Andere statische pagina's
@@ -794,6 +827,13 @@ function check_answer($vraagid, $answer) {
                         <map name="leaderboard">
                             <area shape="rect" coords="0, 0, 200, 200" href="index.php">
                         </map>
+                        <?php
+                        break;
+                    case 'versie':
+                        ?>
+                        <a href="index.php?versie=1">Versie 1 - Math, Trivia, Find-The-Location</a><br>
+                        <a href="index.php?versie=2">Versie 2 - Exercise, Find-The-Location</a><br>
+                        <a href="index.php?versie=3">Versie 3 - Math, Trivia, Exercise</a><br>
                         <?php
                         break;
                     case 'reset':
