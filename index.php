@@ -447,7 +447,7 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=11&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
@@ -609,7 +609,7 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=16&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
@@ -763,7 +763,7 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=21&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
     <?php
