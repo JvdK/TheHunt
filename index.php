@@ -24,6 +24,7 @@ $questions = array(
     18 => 1,
     19 => 1,
     20 => 4,
+    21 => 1
 
 );
 
@@ -159,7 +160,7 @@ function check_answer($vraagid, $answer) {
                                 <a href="index.php?vraag=2&antwoord=3"><div>147</div></a>
                                 <a href="index.php?vraag=2&antwoord=4"><div>125</div></a>
                                 <br>
-                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
+                                <a href="index.php?vraag=2&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
@@ -188,7 +189,7 @@ function check_answer($vraagid, $answer) {
                                 <a href="index.php?vraag=3&antwoord=3"><div>Paprika</div></a>
                                 <a href="index.php?vraag=3&antwoord=4"><div>Tomaat</div></a>
                                 <br>
-                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
+                                <a href="index.php?vraag=3&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
