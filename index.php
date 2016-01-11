@@ -79,14 +79,18 @@ function check_answer($vraagid, $answer) {
             </script>
             <?php
         } else {
-            if(isset($_GET['giveup'])) {
+            if(isset($_GET['opgegeven'])) {
                 $_SESSION['punten'] = $_SESSION['punten'] - 5;
+                $next = $vraagid + 1;
                 ?>
-                <div style="height: 100%; width: 100%; background-color: darkred;">
+                <div style="height: 100%; width: 100%; background-color: grey;">
                     <div class="result">
-                        OPGEGEVEN
+                        JAMMER
                     </div>
                 </div>
+                <script>
+                    setTimeout("location.href = 'index.php?vraag=<?php echo $next; ?>';",2500);
+                </script>
                 <?php
             } else {
                 // Hier kunnen alle vragen ingezet worden.
@@ -112,7 +116,7 @@ function check_answer($vraagid, $answer) {
                                 <a href="index.php?vraag=1&antwoord=3"><div>China</div></a>
                                 <a href="index.php?vraag=1&antwoord=4"><div>Amerika</div></a>
                                 <br>
-                                <div>Geef op (-5)</div>
+                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
@@ -138,7 +142,7 @@ function check_answer($vraagid, $answer) {
                                 <a href="index.php?vraag=2&antwoord=3"><div>147</div></a>
                                 <a href="index.php?vraag=2&antwoord=4"><div>125</div></a>
                                 <br>
-                                <div>Geef op (-5)</div>
+                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
@@ -167,7 +171,7 @@ function check_answer($vraagid, $answer) {
                                 <a href="index.php?vraag=3&antwoord=3"><div>Paprika</div></a>
                                 <a href="index.php?vraag=3&antwoord=4"><div>Tomaat</div></a>
                                 <br>
-                                <div>Geef op (-5)</div>
+                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
@@ -219,7 +223,7 @@ function check_answer($vraagid, $answer) {
                                 <br>
                                 <br>
                                 <br>
-                                <div>Geef op (-5)</div>
+                                <a href="index.php?vraag=1&opgegeven"><div>Geef op (-5)</div></a>
                             </div>
                         </div>
                         <?php
@@ -235,10 +239,10 @@ function check_answer($vraagid, $answer) {
             $_SESSION['name'] = 'Team 1';
             $_SESSION['punten'] = 0;
             ?>
-            <div class="page">
+            <div class="page" style="text-align: center;">
                 <br>
-                <img style="max-width: 260px; max-height: 260px;" src="images/logo.png">
-                <a href="index.php?vraag=1"></a><div class="menubutton">Start</div>
+                <img style="max-width: 260px; max-height: 260px;" src="images/logo.png"><br>
+                <a href="index.php?vraag=1"><div class="menubutton">Start</div></a>
             </div>
         <?php } else {
             // Andere statische pagina's
