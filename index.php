@@ -1081,6 +1081,31 @@ function check_answer($vraagid, $answer) {
         break;
     case 106: ?>
         <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/106.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=106&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=106&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
             <div class="topbar">
                 <div class="back">
                     <a href="index.php"><</a>
@@ -1091,22 +1116,48 @@ function check_answer($vraagid, $answer) {
             </div>
             <div class="question">
                 <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
+                    <br>
+                    <br>
+                    Ga hier naar toe:
                 </div>
             </div>
             <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
                 <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=106&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
-    <?php
-    break;
+        <?php
+        break;
     case 107: ?>
         <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/107.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=107&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=107&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
             <div class="topbar">
                 <div class="back">
                     <a href="index.php"><</a>
@@ -1117,22 +1168,48 @@ function check_answer($vraagid, $answer) {
             </div>
             <div class="question">
                 <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
+                    <br>
+                    <br>
+                    Voer een kruiwagen uit.
                 </div>
             </div>
             <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
                 <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=107&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
-    <?php
-    break;
+        <?php
+        break;
     case 108: ?>
         <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/107.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=108&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=108&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
             <div class="topbar">
                 <div class="back">
                     <a href="index.php"><</a>
@@ -1143,20 +1220,21 @@ function check_answer($vraagid, $answer) {
             </div>
             <div class="question">
                 <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
+                    <br>
+                    <br>
+                    Iedereen planken!
                 </div>
             </div>
             <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
                 <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=108&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
-    <?php
-    break;
+        <?php
+        break;
     case 109: ?>
         <div>
             <div class="topbar">
