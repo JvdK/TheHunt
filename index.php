@@ -25,6 +25,16 @@ $questions = array(
     19 => 1,
     20 => 4,
     21 => 1,
+    101 => 1,
+    102 => 1,
+    103 => 1,
+    104 => 1,
+    105 => 1,
+    106 => 1,
+    107 => 1,
+    108 => 1,
+    109 => 1,
+    110 => 1,
     201 => 2,
     202 => 2,
     203 => 3,
@@ -889,13 +899,13 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/6.php")
+                        $.ajax("detect/102.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=6&antwoord=1";
+                                    window.location = "index.php?vraag=102&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=6&antwoord=0";
+                                    window.location = "index.php?vraag=102&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -923,7 +933,10 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/2.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
@@ -931,7 +944,7 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=102&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
@@ -994,7 +1007,7 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/103.php")
+                        $.ajax("detect/104.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
                                     window.location = "index.php?vraag=104&antwoord=1";
@@ -1028,7 +1041,10 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Sprint 10 meter, en terug.
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/3.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
@@ -1046,65 +1062,13 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/103.php")
+                        $.ajax("detect/105.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
                                     window.location = "index.php?vraag=105&antwoord=1";
                                 }
                                 if(data == 'false') {
                                     window.location = "index.php?vraag=105&antwoord=0";
-                                }
-                            })
-                            .fail(function () {
-                                // alert("Something Happened");
-                            })
-                            .always(function ( data ) {
-                                if(data) {
-                                    console.log("Received: " + data);
-                                } else {
-                                    console.log("Waiting to complete...");
-                                }
-                            })
-                    }, 1000);
-                });
-            </script>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>
-                    <br>
-                    Ga hier naar toe:
-                </div>
-            </div>
-            <div class="answers">
-                <br>
-                <br>
-                <br>
-                <br>
-                <a href="index.php?vraag=105&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-        <?php
-        break;
-    case 106: ?>
-        <div>
-            <script>
-                $(document).ready( function() {
-                    setInterval(function(){
-                        $.ajax("detect/104.php")
-                            .done(function ( data ) {
-                                if(data == 'true') {
-                                    window.location = "index.php?vraag=106&antwoord=1";
-                                }
-                                if(data == 'false') {
-                                    window.location = "index.php?vraag=106&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1140,6 +1104,61 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
+                <a href="index.php?vraag=105&opgegeven"><div>Geef op (-5)</div></a>
+            </div>
+        </div>
+        <?php
+        break;
+    case 106: ?>
+        <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/106.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=106&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=106&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    <br>
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/4.JPG">
+                    </div>
+                </div>
+            </div>
+            <div class="answers">
+                <br>
+                <br>
+                <br>
+                <br>
                 <a href="index.php?vraag=106&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
@@ -1150,7 +1169,7 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/103.php")
+                        $.ajax("detect/107.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
                                     window.location = "index.php?vraag=107&antwoord=1";
@@ -1184,7 +1203,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+Voer 15 sit-ups uit.
                 </div>
             </div>
             <div class="answers">
@@ -1236,7 +1255,10 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Voer 15 sit-ups uit.
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/5.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
@@ -1254,7 +1276,7 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/103.php")
+                        $.ajax("detect/109.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
                                     window.location = "index.php?vraag=109&antwoord=1";
@@ -1288,7 +1310,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Voer een kruiwagen uit.
                 </div>
             </div>
             <div class="answers">
@@ -1340,11 +1362,16 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/1.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
-                <div class="image"><img src="images/2.jpg"></div>
+                <br>
+                <br>
+                <br>
                 <br>
                 <a href="index.php?vraag=110&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -1353,31 +1380,6 @@ function check_answer($vraagid, $answer) {
         break;
     case 111: ?>
         <div>
-            <script>
-                $(document).ready( function() {
-                    setInterval(function(){
-                        $.ajax("detect/111.php")
-                            .done(function ( data ) {
-                                if(data == 'true') {
-                                    window.location = "index.php?vraag=111&antwoord=1";
-                                }
-                                if(data == 'false') {
-                                    window.location = "index.php?vraag=111&antwoord=0";
-                                }
-                            })
-                            .fail(function () {
-                                // alert("Something Happened");
-                            })
-                            .always(function ( data ) {
-                                if(data) {
-                                    console.log("Received: " + data);
-                                } else {
-                                    console.log("Waiting to complete...");
-                                }
-                            })
-                    }, 1000);
-                });
-            </script>
             <div class="topbar">
                 <div class="back">
                     <a href="index.php"><</a>
@@ -1389,73 +1391,14 @@ function check_answer($vraagid, $answer) {
             <div class="question">
                 <div class="questionInner">
                     <br>
-                    <br>
-                    Voer een kruiwagen uit.
+                    Gefeliciteerd!<br><br>
+                    Jullie hebben<br><?php echo $_SESSION['punten']; ?> punten<br><br>
+                    Het kostte jullie<br><?php $time = time() - $_SESSION['start']; echo $time; ?> seconden
                 </div>
-            </div>
-            <div class="answers">
-                <br>
-                <br>
-                <br>
-                <br>
-                <a href="index.php?vraag=111&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
-    case 108: ?>
-        <div>
-            <script>
-                $(document).ready( function() {
-                    setInterval(function(){
-                        $.ajax("detect/112.php")
-                            .done(function ( data ) {
-                                if(data == 'true') {
-                                    window.location = "index.php?vraag=112&antwoord=1";
-                                }
-                                if(data == 'false') {
-                                    window.location = "index.php?vraag=112&antwoord=0";
-                                }
-                            })
-                            .fail(function () {
-                                // alert("Something Happened");
-                            })
-                            .always(function ( data ) {
-                                if(data) {
-                                    console.log("Received: " + data);
-                                } else {
-                                    console.log("Waiting to complete...");
-                                }
-                            })
-                    }, 1000);
-                });
-            </script>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>
-                    <br>
-                    Iedereen planken!
-                </div>
-            </div>
-            <div class="answers">
-                <br>
-                <br>
-                <br>
-                <br>
-                <a href="index.php?vraag=112&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-        <?php
-        break;
-
 
     case 201: ?>
         <div>
