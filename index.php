@@ -2098,7 +2098,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Voer 10 squats uit.
                 </div>
             </div>
             <div class="answers">
