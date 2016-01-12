@@ -320,9 +320,9 @@ function check_answer($vraagid, $answer) {
                 </div>
             </div>
             <div class="answers">
-                <br>
-                <br>
-                <br>
+                <div class="image">
+                    <img src="images/2.JPG">
+                </div>
                 <br>
                 <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -473,9 +473,9 @@ function check_answer($vraagid, $answer) {
                 </div>
             </div>
             <div class="answers">
-                <br>
-                <br>
-                <br>
+                <div class="image">
+                    <img src="images/3.JPG">
+                </div>
                 <br>
                 <a href="index.php?vraag=11&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -635,9 +635,9 @@ function check_answer($vraagid, $answer) {
                 </div>
             </div>
             <div class="answers">
-                <br>
-                <br>
-                <br>
+                <div class="image">
+                    <img src="images/4.JPG">
+                </div>
                 <br>
                 <a href="index.php?vraag=16&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -789,9 +789,9 @@ function check_answer($vraagid, $answer) {
                 </div>
             </div>
             <div class="answers">
-                <br>
-                <br>
-                <br>
+                <div class="image">
+                    <img src="images/1.JPG">
+                </div>
                 <br>
                 <a href="index.php?vraag=21&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -1122,9 +1122,7 @@ function check_answer($vraagid, $answer) {
                 </div>
             </div>
             <div class="answers">
-                <br>
-                <br>
-                <br>
+                <div class="image"><img src="images/2.jpg"></div>
                 <br>
                 <a href="index.php?vraag=106&opgegeven"><div>Geef op (-5)</div></a>
             </div>
