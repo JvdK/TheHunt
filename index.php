@@ -1014,7 +1014,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Spring 10 keer.
+                    Voer 10 squats uit.
                 </div>
             </div>
             <div class="answers">
@@ -1029,6 +1029,31 @@ function check_answer($vraagid, $answer) {
         break;
     case 105: ?>
         <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/105.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=105&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=105&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
             <div class="topbar">
                 <div class="back">
                     <a href="index.php"><</a>
@@ -1039,20 +1064,21 @@ function check_answer($vraagid, $answer) {
             </div>
             <div class="question">
                 <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
+                    <br>
+                    <br>
+                    Voer 15 sit-ups uit.
                 </div>
             </div>
             <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
                 <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=105&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
-    <?php
-    break;
+        <?php
+        break;
     case 106: ?>
         <div>
             <div class="topbar">
