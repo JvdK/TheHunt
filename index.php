@@ -316,13 +316,16 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/2.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
-                <div class="image">
-                    <img src="images/2.JPG">
-                </div>
+                <br>
+                <br>
+                <br>
                 <br>
                 <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -469,13 +472,16 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/3.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
-                <div class="image">
-                    <img src="images/3.JPG">
-                </div>
+                <br>
+                <br>
+                <br>
                 <br>
                 <a href="index.php?vraag=11&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -631,13 +637,16 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/4.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
-                <div class="image">
-                    <img src="images/4.JPG">
-                </div>
+                <br>
+                <br>
+                <br>
                 <br>
                 <a href="index.php?vraag=16&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -785,13 +794,16 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Ga hier naar toe:
+                    Ga hier naar toe:<br>
+                    <div class="imagefind">
+                        <img src="images/1.JPG">
+                    </div>
                 </div>
             </div>
             <div class="answers">
-                <div class="image">
-                    <img src="images/1.JPG">
-                </div>
+                <br>
+                <br>
+                <br>
                 <br>
                 <a href="index.php?vraag=21&opgegeven"><div>Geef op (-5)</div></a>
             </div>
@@ -871,18 +883,19 @@ function check_answer($vraagid, $answer) {
         </div>
         <?php
         break;
+
     case 102: ?>
         <div>
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/102.php")
+                        $.ajax("detect/6.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=102&antwoord=1";
+                                    window.location = "index.php?vraag=6&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=102&antwoord=0";
+                                    window.location = "index.php?vraag=6&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -910,7 +923,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Druk 5 keer op.
+                    Ga hier naar toe:
                 </div>
             </div>
             <div class="answers">
@@ -918,11 +931,12 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=102&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=6&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
+
     case 103: ?>
         <div>
             <script>
@@ -962,7 +976,7 @@ function check_answer($vraagid, $answer) {
                 <div class="questionInner">
                     <br>
                     <br>
-                    Sprint 10 meter, en terug.
+                    Druk 5 keer op.
                 </div>
             </div>
             <div class="answers">
@@ -980,13 +994,117 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/104.php")
+                        $.ajax("detect/103.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
                                     window.location = "index.php?vraag=104&antwoord=1";
                                 }
                                 if(data == 'false') {
                                     window.location = "index.php?vraag=104&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    <br>
+                    Sprint 10 meter, en terug.
+                </div>
+            </div>
+            <div class="answers">
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=104&opgegeven"><div>Geef op (-5)</div></a>
+            </div>
+        </div>
+        <?php
+        break;
+    case 105: ?>
+        <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/103.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=105&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=105&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    <br>
+                    Ga hier naar toe:
+                </div>
+            </div>
+            <div class="answers">
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=105&opgegeven"><div>Geef op (-5)</div></a>
+            </div>
+        </div>
+        <?php
+        break;
+    case 106: ?>
+        <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/104.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=106&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=106&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1022,23 +1140,75 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=104&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=106&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
-    case 105: ?>
+    case 107: ?>
         <div>
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/105.php")
+                        $.ajax("detect/103.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=105&antwoord=1";
+                                    window.location = "index.php?vraag=107&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=105&antwoord=0";
+                                    window.location = "index.php?vraag=107&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    <br>
+                    Ga hier naar toe:
+                </div>
+            </div>
+            <div class="answers">
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=107&opgegeven"><div>Geef op (-5)</div></a>
+            </div>
+        </div>
+        <?php
+        break;
+    case 108: ?>
+        <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/108.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=108&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=108&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1074,23 +1244,75 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=105&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=108&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
-    case 106: ?>
+    case 109: ?>
         <div>
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/106.php")
+                        $.ajax("detect/103.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=106&antwoord=1";
+                                    window.location = "index.php?vraag=109&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=106&antwoord=0";
+                                    window.location = "index.php?vraag=109&antwoord=0";
+                                }
+                            })
+                            .fail(function () {
+                                // alert("Something Happened");
+                            })
+                            .always(function ( data ) {
+                                if(data) {
+                                    console.log("Received: " + data);
+                                } else {
+                                    console.log("Waiting to complete...");
+                                }
+                            })
+                    }, 1000);
+                });
+            </script>
+            <div class="topbar">
+                <div class="back">
+                    <a href="index.php"><</a>
+                </div>
+                <div class="points">
+                    <?php echo $_SESSION['punten']; ?> Punten
+                </div>
+            </div>
+            <div class="question">
+                <div class="questionInner">
+                    <br>
+                    <br>
+                    Ga hier naar toe:
+                </div>
+            </div>
+            <div class="answers">
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="index.php?vraag=109&opgegeven"><div>Geef op (-5)</div></a>
+            </div>
+        </div>
+        <?php
+        break;
+    case 110: ?>
+        <div>
+            <script>
+                $(document).ready( function() {
+                    setInterval(function(){
+                        $.ajax("detect/110.php")
+                            .done(function ( data ) {
+                                if(data == 'true') {
+                                    window.location = "index.php?vraag=110&antwoord=1";
+                                }
+                                if(data == 'false') {
+                                    window.location = "index.php?vraag=110&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1124,23 +1346,23 @@ function check_answer($vraagid, $answer) {
             <div class="answers">
                 <div class="image"><img src="images/2.jpg"></div>
                 <br>
-                <a href="index.php?vraag=106&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=110&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
-    case 107: ?>
+    case 111: ?>
         <div>
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/107.php")
+                        $.ajax("detect/111.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=107&antwoord=1";
+                                    window.location = "index.php?vraag=111&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=107&antwoord=0";
+                                    window.location = "index.php?vraag=111&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1176,7 +1398,7 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=107&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=111&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
@@ -1186,13 +1408,13 @@ function check_answer($vraagid, $answer) {
             <script>
                 $(document).ready( function() {
                     setInterval(function(){
-                        $.ajax("detect/107.php")
+                        $.ajax("detect/112.php")
                             .done(function ( data ) {
                                 if(data == 'true') {
-                                    window.location = "index.php?vraag=108&antwoord=1";
+                                    window.location = "index.php?vraag=112&antwoord=1";
                                 }
                                 if(data == 'false') {
-                                    window.location = "index.php?vraag=108&antwoord=0";
+                                    window.location = "index.php?vraag=112&antwoord=0";
                                 }
                             })
                             .fail(function () {
@@ -1228,375 +1450,12 @@ function check_answer($vraagid, $answer) {
                 <br>
                 <br>
                 <br>
-                <a href="index.php?vraag=108&opgegeven"><div>Geef op (-5)</div></a>
+                <a href="index.php?vraag=112&opgegeven"><div>Geef op (-5)</div></a>
             </div>
         </div>
         <?php
         break;
-    case 109: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 110: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 111: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 112: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 113: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 114: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 115: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 116: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 117: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 118: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 119: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 120: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 121: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
-    case 122: ?>
-        <div>
-            <div class="topbar">
-                <div class="back">
-                    <a href="index.php"><</a>
-                </div>
-                <div class="points">
-                    <?php echo $_SESSION['punten']; ?> Punten
-                </div>
-            </div>
-            <div class="question">
-                <div class="questionInner">
-                    <br>Wat produceren bijen?<br>
-                </div>
-            </div>
-            <div class="answers">
-                <a href="index.php?vraag=101&antwoord=1"><div>Vla</div></a>
-                <a href="index.php?vraag=101&antwoord=2"><div>Brood</div></a>
-                <a href="index.php?vraag=101&antwoord=3"><div>Honing</div></a>
-                <a href="index.php?vraag=101&antwoord=4"><div>Jam</div></a>
-                <br>
-                <a href="index.php?vraag=101&opgegeven"><div>Geef op (-5)</div></a>
-            </div>
-        </div>
-    <?php
-    break;
+
 
     case 201: ?>
         <div>
