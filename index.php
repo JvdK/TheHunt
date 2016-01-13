@@ -122,7 +122,7 @@ function check_answer($vraagid, $answer) {
                 ?>
                 <div style="height: 100%; width: 100%; background-color: darkgreen;">
                     <div class="result">
-                        CORRECT
+                        GOED
                     </div>
                 </div>
             <?php } else { ?>

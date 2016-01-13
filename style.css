@@ -85,8 +85,13 @@ html, body {
 
 .image img {
     margin-top: 10px;
-    max-height: 120px;
-    max-width: 120px;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.imagefind img {
+    max-width: 280px;
+    max-height: 280px;
 }
 
 a:link {
